@@ -299,7 +299,7 @@ export async function before(m) {
 	}
 
 	if (before !== user.level) {
-		let ini_txt = `Selamat 🥳, anda telah naik level!\n\n• 🧬 Level Up : *${before}* -> *${user.level}*`.trim()
+		let ini_txt = `Congratulations 🥳, you have leveled up!\n\n• 🧬 Level Up : *${before}* -> *${user.level}*`.trim()
 		try {
 			let image, data, pp
 			try {
