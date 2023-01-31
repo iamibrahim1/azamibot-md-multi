@@ -10,8 +10,8 @@ let handler = async (m, { conn, args }) => {
 	if (!args[0]) throw '[!] Input GoogleDrive URL'
 	GDriveDl(args[0]).then(async (res) => {
 		if (res.error || res.status) return m.reply(`Invalid GoogleDrive URL Promise`)
-		if (res.fileSize.slice(-2) == "GB") return m.reply(`Ngotak dong.\nMana bisa ngirim video ${res.fileSize}`)
-		if (!someincludes(['kB','KB'], res.fileSize.slice(-2)) && parseInt(res.fileSize) > 300) return m.reply(`Filesize: ${res.fileSize}\nTidak dapat mengirim, maksimal file 300 MB`)
+		if (res.fileSize.slice(-2) == "GB") return m.reply(`No brain, please.\nWhere can I send the video ${res.fileSize}`)
+		if (!someincludes(['kB','KB'], res.fileSize.slice(-2)) && parseInt(res.fileSize) > 1000) return m.reply(`Filesize: ${res.fileSize}\nUnable to send, maximum file size is 1000 MB`)
 		let txt = `_*Downloading file, don't spam . . .*_\n\n`
 		txt += `*filename :* ${res.fileName}\n`
 		txt += `*filesize :* ${res.fileSize}\n`
