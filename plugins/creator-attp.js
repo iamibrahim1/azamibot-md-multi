@@ -3,7 +3,7 @@ import fs from 'fs'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	text = text ? text : m.quoted?.text ? m.quoted.text : m.quoted?.caption ? m.quoted.caption : m.quoted?.description ? m.quoted.description : ''
-	if (!text) throw `Example : ${usedPrefix + command} Lagi Ruwet`
+	if (!text) throw `Example : ${usedPrefix + command} Ibrahim`
 	try {
 		let stiker = await createSticker(`https://api.lolhuman.xyz/api/${command}?apikey=${apilol}&text=${encodeURIComponent(text.substring(0, 151))}`, { pack: packname, author: author })
 		await conn.sendFile(m.chat, stiker, 'atet.webp', '', m)
