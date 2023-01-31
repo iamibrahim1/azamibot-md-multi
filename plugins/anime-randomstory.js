@@ -13,7 +13,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 			conn.sendButton(m.chat, `_Random Story Anime_`, pauthor, dir[Math.floor(Math.random() * dir.length)], [[`⧑ next ${command} ⧑`, `${usedPrefix + command}`]], m)
 		} catch (e) {
 			console.log(e)
-			m.reply(`Terjadi kesalahan, coba lagi nanti.`)
+			m.reply(`An error occurred, try again later.`)
 		}
 	}
 }
