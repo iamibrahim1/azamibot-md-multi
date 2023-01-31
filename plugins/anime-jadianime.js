@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 				throw '[ ! ] Gagal, gunakan foto lainnya.'
 			}
 		}
-	} else m.reply(`Kirim gambar dengan caption *${usedPrefix + command}* atau tag gambar yang sudah dikirim`)
+	} else m.reply(`Send images with the caption *${usedPrefix + command}* or the image tags that have been sent`)
 }
 
 handler.menuanime = ['jadianime']
