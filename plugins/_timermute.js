@@ -9,7 +9,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
 		chat.lastmute = 0
 		chat.mutecd = 0
 		chat.isBanned = false
-		await this.sendMessage(m.chat, { text: `Bot dapat digunakan kembali.` }, { quoted: fkontak })
+		await this.sendMessage(m.chat, { text: `Bots can be resmused.` }, { quoted: fkontak })
 	}
 	return !0
 }
