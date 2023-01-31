@@ -1,7 +1,7 @@
 import { pickRandom } from '../lib/others.js'
 
-const bot = ['ada apa bro ?','apa sih','apa sayang','jangan ngagetin dong','iya','kenapa dah','bodo amat','gua tandain muka lu','bukan, ini patrick','lu itu gak diajak','gua mulu ajg','menahan emosi','males','ada yang bisa dibantu ?','lagi tes sinyal ya ?','selalu disampingmu','selalu bersamamu']
-const ping = ['pakai prefix','command yg betul','gak btul','contoh : .ping','pake titik coba','apa coba','Kecepatan Repon = Kecepatan Cahaya','yahaha ngemlag','pakai titik\n\n.ping gitu','waktunya bayar wifi','kuota mu sekarat','Ping : 0 miliseconds','adu .testspeed ?']
+const bot = ['what's wrong bro?','what's the matter','what dear','don't surprise me','yes','why','what a fool','I'll mark your face','no , this is Patrick','you weren't invited','I'm just too lazy','holding in my emotions','lazy','can anyone help?','signal test again huh?','always beside you','always with you']
+const ping = ['use the prefix', 'correct command','not correct','example: .ping','use a trial point','what do you try','response speed = light speed','yahaha crashes' ,'use point\n\n.ping like that','its time to pay for wifi','your quota is dying','Ping : 0 miliseconds','fight .testspeed?']
 
 export async function before(m) {
 	if (!m.isGroup) return !1
