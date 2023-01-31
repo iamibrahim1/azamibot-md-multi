@@ -11,7 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 		if (!res.ok) throw await `Fitur Error!`
 		let json = await res.json()
 		if (json.status != '200') throw `Fitur Error!`
-		if (json.result.length == 0) throw `Gagal mendeteksi, usahakan sumber gambar berasal dari page manga.`
+		if (json.result.length == 0) throw `Failed to detect, try to source the image from the manga page.`
 		let get_result = json.result
 		let ini_txt = `*RESULT :*`
 		for (var x of get_result) {
@@ -26,7 +26,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 		}
 		m.reply(ini_txt)
 	} else {
-		m.reply(`Kirim gambar dengan caption *${usedPrefix + command}* atau tag gambar yang sudah dikirim`)
+		m.reply(`Send pictures with captions *${usedPrefix + command}* or image tags that have already been submitted`)
 	}
 }
 
