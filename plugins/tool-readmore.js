@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
 	conn.reply(m.chat, l + readMore + r, m)
 }
 
-handler.help = ['readmore <teks>|<teks>']
+handler.help = ['readmore <text>|<text>']
 handler.tags = ['tools']
 handler.command = /^(spoiler|hidetext|(read)?more|selengkapnya)$/i
 
