@@ -1,18 +1,18 @@
 let handler = async (m, { conn, usedPrefix, command, text }) => {
 	if (!text) throw `Example : ${usedPrefix + command} celana`
 	conn.hartatahta = conn.hartatahta ? conn.hartatahta : {}
-	if (m.chat in conn.hartatahta) throw 'Masih ada yang sedang membuat\nTeks Harta Tahta\ndi chat ini... tunggu sampai selesai'
+	if (m.chat in conn.hartatahta) throw 'Someone is still making\Text Treasure Throne\in this chat... wait until its finished'
 	else conn.hartatahta[m.chat] = true
-	m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
+	m.reply('Currently making..._\n*Please wait about 1 minutet*')
 	try {
 		let img = await ht(text ? text : ':v')
-		await conn.sendMessage(m.chat, { image: img, caption: '*© Nurutomo*\nMade with FFmpeg' }, { quoted: m })
+		await conn.sendMessage(m.chat, { image: img, caption: '*© Ibrahim*\nMade with FFmpeg' }, { quoted: m })
 	} finally {
 		delete conn.hartatahta[m.chat]
 	}
 }
 
-handler.help = ['tahta <teks>']
+handler.help = ['throne <text>']
 handler.tags = ['tools']
 handler.command = /^((harta)?tahta)$/i
 
