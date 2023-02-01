@@ -15,7 +15,7 @@ let handler = async (m, { conn, command, text }) => {
 			let res = await fetch(`https://oni-chan.my.id/api/canvas/nulis?text=${txt}`)
 			let p = 1, anu = await res.json()
 			for (let x of anu.results) {
-				await conn.sendMessage(m.chat, { image: { url: x }, caption: `*lembar [${p}]* Hati² ketahuan:v${mapel ? '' : `${p == 1 ? '' : '\n_teks|tgl|no|nama|mapel (agar lebih detail)_'}`}` }, { quoted: m })
+				await conn.sendMessage(m.chat, { image: { url: x }, caption: `*lembar [${p}]* Be careful:v${mapel ? '' : `${p == 1 ? '' : '\n_teks|tgl|no|nama|mapel (for more details)_'}`}` }, { quoted: m })
 				p++
 			}
 		} else {
@@ -72,13 +72,13 @@ let handler = async (m, { conn, command, text }) => {
 		spawn(_spawnprocess, _spawnargs)
 			.on('error', e => m.reply(format(e)))
 			.on('close', async () => {
-				await conn.sendMessage(m.chat, { image: Buffer.concat(bufs), caption: 'Hati² ketahuan:v' }, { quoted: m })
+				await conn.sendMessage(m.chat, { image: Buffer.concat(bufs), caption: 'Be carefull:v' }, { quoted: m })
 			})
 			.stdout.on('data', chunk => bufs.push(chunk))
 	}
 }
 
-handler.help = ['nulis','nuliskanankiri'].map(v => v + ' <teks>')
+handler.help = ['write','writeright'].map(v => v + ' <teks>')
 handler.tags = ['tools']
 handler.command = /^(nulis(kanan(kiri)?)?)$/i
 
