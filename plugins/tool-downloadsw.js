@@ -1,5 +1,5 @@
 let handler = async (m, { conn }) => {
-	if (m.quoted?.chat != 'status@broadcast') throw `Quote Pesan Status`
+	if (m.quoted?.chat != 'status@broadcast') throw `Status Message Quotes`
 	try {
 		let buffer = await m.quoted.download()
 		await conn.sendFile(m.chat, buffer, '', m.quoted.text || '', null, false, { quoted: m })
