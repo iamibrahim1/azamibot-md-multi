@@ -22,7 +22,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
 			m.reply(`[ LINK ]\n=> invalid source`)
 		}
 	} else {
-		m.reply(`Kirim Teks URL atau gambar dengan caption *${usedPrefix + command}* atau tag gambar yang sudah dikirim`)
+		m.reply(`Send URL Text or image with caption *${usedPrefix + command}* or image tag already sent`)
 	}
 }
 
