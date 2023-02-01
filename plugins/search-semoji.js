@@ -3,7 +3,7 @@ import * as emoji from 'emoji-api'
 import { Sticker, StickerTypes } from 'wa-sticker-formatter'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-	if (!args[0]) throw `Emojinya mana ?\n\nContoh : *${usedPrefix + command} 🤖*`
+	if (!args[0]) throw `Where's the emoji?\n\nExample : *${usedPrefix + command} 🤖*`
 	let ztick = fs.readFileSync(`./media/sticker/bronya.webp`)
 	try {
 		let anu = args[1] ? await emoji.get(args[1]).twemoji() : await emoji.get(args[0]).twemoji()
