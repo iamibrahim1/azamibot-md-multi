@@ -12,7 +12,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 		await conn.sendMessage(m.chat, { image: fimgb, caption: `_Text Pro : ${command}_` }, { quoted: m })
 	} catch (e) {
 		console.log(e)
-		m.reply(`Terjadi kesalahan, coba lagi nanti.`)
+		m.reply(`An error occurred, try again later.`)
 	}
 }
 
