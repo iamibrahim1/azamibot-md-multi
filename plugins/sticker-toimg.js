@@ -16,7 +16,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 			await conn.sendMessage(m.chat, { image: Buffer.concat(bufs), caption: `*DONE*` }, { quoted: m })
 		})
 	} else if (m.quoted && /sticker/.test(m.quoted.mtype) && m.quoted.isAnimated) {
-		return m.reply(`yah gagal\nCoba gunakan *${usedPrefix}tomp4* untuk stiker bergerak`)
+		return m.reply(`ya failed\Try using *${usedPrefix}to mp4* for moving stickers`)
 	} else throw 'Reply / tag Sticker'
 }
 
