@@ -11,8 +11,8 @@ let handler = async (m) => {
 	stats = await stats.filter(e => e).sort((a, b) => b.total - a.total)
 	let cut = stats.slice(0, 3)
 	let txt = `📊 *Database : ${totaluser} User*\n\n`
-	txt += `*Command Digunakan :* ${stats.length}\n\n`
-	txt += `*Paling sering digunakan :*`
+	txt += `*Commands Used :* ${stats.length}\n\n`
+	txt += `*Most used :*`
 	for (let i of cut) {
 		txt += `\n*[ ${i.total} hit ]*`
 		txt += `\n┗⊱ ${i.name.replaceAll('.js','')}`
